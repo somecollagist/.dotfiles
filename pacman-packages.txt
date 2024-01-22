@@ -1,0 +1,10 @@
+base
+base-devel
+fish
+foot
+git
+hyprland
+neofetch
+networkmanager
+iwctl
+ttf-jetbrains-mono-nerd

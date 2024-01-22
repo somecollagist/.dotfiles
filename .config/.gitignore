@@ -1,0 +1,17 @@
+# Visual Studio Code
+Code/*
+!Code/User/
+Code/User/*
+!Code/User/settings.json
+
+# fish
+fish/*
+!/fish/config.fish
+
+# gtk
+gtk-*/
+
+# misc programs
+dconf/
+pulse/
+yay/
