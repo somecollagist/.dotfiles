@@ -1,17 +1,12 @@
+# By default, ignore all
+*/
+
+# Config directories
+!eww
+!neofetch
+
+# Particular files
 # Visual Studio Code
-Code/*
-!Code/User/
-Code/User/*
 !Code/User/settings.json
-
-# fish
-fish/*
+# Fish
 !/fish/config.fish
-
-# gtk
-gtk-*/
-
-# misc programs
-dconf/
-pulse/
-yay/

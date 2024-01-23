@@ -1,1 +1,4 @@
 sddm-git
+spicetify-cli
+spotify
+visual-studio-code-bin
