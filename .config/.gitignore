@@ -10,3 +10,4 @@
 !Code/User/settings.json
 # Fish
 !/fish/config.fish
+!/fish/fish_variables
