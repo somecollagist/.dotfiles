@@ -1,0 +1,35 @@
+(include "data.yuck")
+
+(defwindow bar
+    :monitor 0
+    :geometry (geometry
+        :x "0px"
+        :y "4px"
+        :width "100%"
+        :anchor "top center"
+    )
+    :stacking "fg"
+    :exclusive true
+    :focusable false
+    (box :class "dockbox"
+        :halign "fill"
+        :hexpand true
+        (box :class "dock leftdock"
+            :halign "start"
+            :space-evenly false
+            "Left"
+        )
+        (box :class "dock centerdock"
+            :halign "center"
+            :space-evenly false
+            { brightness }
+            { datetime }
+            { volume }
+        )
+        (box :class "dock rightdock"
+            :halign "end"
+            :space-evenly false
+            "Right"
+        )
+    )
+)

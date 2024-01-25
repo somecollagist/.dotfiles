@@ -1,0 +1,13 @@
+(defpoll datetime
+    :interval "1s"
+    `date "+%Y/%m/%d %H:%M:%S"`
+)
+
+(defpoll brightness
+    :interval "1s"
+    "./scripts/brightness.sh"    
+)
+
+(deflisten volume
+    "./scripts/volume.sh"
+)

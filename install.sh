@@ -19,3 +19,4 @@ yay -S $AUR_PACKAGES --needed --no-confirm
 sudo systemctl enable --now iwd
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now sddm
+sudo systemctl enable --now tlp

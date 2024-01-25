@@ -8,4 +8,5 @@ hyprland
 neofetch
 networkmanager
 iwctl
+tlp
 ttf-jetbrains-mono-nerd

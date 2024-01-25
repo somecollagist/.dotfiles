@@ -3,6 +3,7 @@
 
 # Config directories
 !eww
+!eww/scripts
 !neofetch
 
 # Particular files
