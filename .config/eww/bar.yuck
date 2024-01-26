@@ -1,5 +1,30 @@
 (include "data.yuck")
 
+(defwidget cpu []
+    (box :class "cpu"
+        " ${round(EWW_CPU['avg'], 2)}%"
+    )
+)
+
+(defwidget memory []
+    (box :class "memory"
+        " ${round(EWW_RAM['used_mem'] / 1048576, 0)}/${round(EWW_RAM['total_mem'] / 1048576, 0)} KiB"
+    )
+)
+
+(defwidget disk []
+    (box :class "disk"
+        "󰋊 ${round(EWW_DISK['/'].used / 1073741824, 0)}/${round(EWW_DISK['/'].total / 1073741824, 0)} GiB"
+    )
+)
+
+(defvar batteryicons '["", "", "", "", "", "", "", "", "", "", ""]')
+(defwidget battery []
+    (box :class "battery ${EWW_BATTERY['BAT0'].status == 'Not charging' ? 'NotCharging' : EWW_BATTERY['BAT0'].status} ${EWW_BATTERY['BAT0'].capacity < 20 ? 'Critical' : 'NotCritical'}"
+        "${batteryicons[round(EWW_BATTERY['BAT0'].capacity / 10, 0)]}  ${EWW_BATTERY['BAT0'].capacity}%"
+    )
+)
+
 (defwindow bar
     :monitor 0
     :geometry (geometry
@@ -29,7 +54,10 @@
         (box :class "dock rightdock"
             :halign "end"
             :space-evenly false
-            "Right"
+            (cpu)
+            (memory)
+            (disk)
+            (battery)
         )
     )
 )

@@ -4,7 +4,7 @@
 )
 
 (defpoll brightness
-    :interval "1s"
+    :interval "0.25s"
     "./scripts/brightness.sh"    
 )
 
