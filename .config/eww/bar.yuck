@@ -1,4 +1,27 @@
-(include "data.yuck")
+(deflisten workspaces
+    "./scripts/workspaces.sh"
+)
+
+(defpoll datetime
+    :interval "1s"
+    `date "+%Y/%m/%d %H:%M:%S"`
+)
+
+(defpoll brightness
+    :interval "0.25s"
+    "./scripts/brightness.sh"    
+)
+
+(deflisten volume
+    "./scripts/volume.sh"
+)
+
+(defwidget workspaces []
+    (box :class "workspaces"
+        :halign "center"
+        { workspaces }
+    )
+)
 
 (defwidget cpu []
     (box :class "cpu"
@@ -25,24 +48,14 @@
     )
 )
 
-(defwindow bar
-    :monitor 0
-    :geometry (geometry
-        :x "0px"
-        :y "4px"
-        :width "100%"
-        :anchor "top center"
-    )
-    :stacking "fg"
-    :exclusive true
-    :focusable false
+(defwidget bar []
     (box :class "dockbox"
         :halign "fill"
         :hexpand true
         (box :class "dock leftdock"
             :halign "start"
             :space-evenly false
-            "Left"
+            (workspaces)
         )
         (box :class "dock centerdock"
             :halign "center"

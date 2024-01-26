@@ -1,13 +1,4 @@
-(defwindow panel
-    :monitor 0
-    :geometry (geometry
-        :x "50%"
-        :y "50%"
-        :anchor "center"
-    )
-    :stacking "bg"
-    :exclusive false
-    :focusable false
+(defwidget panel []
     (box
         "Panel"
     )

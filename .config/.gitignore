@@ -4,6 +4,8 @@
 # Config directories
 !eww
 !eww/scripts
+!hypr
+!hypr/scripts
 !neofetch
 
 # Particular files
