@@ -1,5 +1,42 @@
+(defpoll timegreeter
+    :interval "60s"
+    `./scripts/timegreeter.sh`
+)
+
+(defwidget timegreeter []
+    (box :class "timegreeter"
+        { timegreeter }
+    )
+)
+
+(defwidget iconshortcut [icon command]
+    (eventbox :class "iconshortcut"
+        :hexpand true
+        :halign "fill"
+        :onclick "${command} & exit"
+        "${icon}"
+    )
+)
+
 (defwidget panel []
-    (box
-        "Panel"
+    (box :class "panel"
+        :halign "fill"
+        :space-evenly false
+        (box :class "shortcutbox"
+            :orientation "vertical"
+            (iconshortcut
+                :icon ""
+                :command "hyprctl dispatch exec firefox"
+            )
+        )
+        (box :class "dashboard"
+            :hexpand true
+            :orientation "vertical"
+            (timegreeter)
+        )
+        (box :class "shortcutbox"
+            :orientation "vertical"
+            "RIGHT"
+        )
     )
 )

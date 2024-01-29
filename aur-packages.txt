@@ -2,4 +2,5 @@ eww-wayland
 sddm-git
 spicetify-cli
 spotify
+ttf-font-awesome-5
 visual-studio-code-bin

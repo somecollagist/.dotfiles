@@ -43,7 +43,7 @@
 
 (defvar batteryicons '["", "", "", "", "", "", "", "", "", "", ""]')
 (defwidget battery []
-    (box :class "battery ${EWW_BATTERY['BAT0'].status == 'Not charging' ? 'NotCharging' : EWW_BATTERY['BAT0'].status} ${EWW_BATTERY['BAT0'].capacity < 20 ? 'Critical' : 'NotCritical'}"
+    (box :class "battery ${EWW_BATTERY['BAT0'].status == 'Not charging' ? 'NotCharging' : EWW_BATTERY['BAT0'].status} ${EWW_BATTERY['BAT0'].capacity <= 20 ? 'Critical' : 'NotCritical'}"
         "${batteryicons[round(EWW_BATTERY['BAT0'].capacity / 10, 0)]}  ${EWW_BATTERY['BAT0'].capacity}%"
     )
 )

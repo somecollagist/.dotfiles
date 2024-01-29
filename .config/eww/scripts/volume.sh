@@ -12,7 +12,6 @@ get-vol() {
     RIGHT=`echo $VOLSTRING | awk '{print $12}' | sed 's/%//'`
 
     echo "$(get-vol-icon $LEFT) $LEFT% | $RIGHT% $(get-vol-icon $RIGHT)"
-
 }
 
 get-vol

@@ -1,2 +1,9 @@
 $foreground: #F5F5F5;
 $background: #1B1B1B;
+
+@mixin border() {
+    border-color: rgba($foreground, 0.25);
+    border-radius: 1em;
+    border-width: 1px;
+    border-style: solid;
+}
