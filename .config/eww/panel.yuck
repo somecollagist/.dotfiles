@@ -24,9 +24,18 @@
         :space-evenly false
         (box :class "shortcutbox"
             :orientation "vertical"
+            :valign "center"
             (iconshortcut
                 :icon ""
                 :command "hyprctl dispatch exec firefox"
+            )
+            (iconshortcut
+                :icon ""
+                :command "hyprctl dispatch exec foot"
+            )
+            (iconshortcut
+                :icon ""
+                :command "hyprctl dispatch exec discord"
             )
         )
         (box :class "dashboard"
@@ -36,7 +45,19 @@
         )
         (box :class "shortcutbox"
             :orientation "vertical"
-            "RIGHT"
+            :valign "center"
+            (iconshortcut
+                :icon ""
+                :command "echo TODO Implement lock"
+            )
+            (iconshortcut
+                :icon ""
+                :command "hyprctl dispatch exit"
+            )
+            (iconshortcut
+                :icon ""
+                :command "poweroff"
+            )
         )
     )
 )

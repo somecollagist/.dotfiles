@@ -73,10 +73,18 @@
     .shortcutbox {
         font-family: 'Font Awesome 5 Free';
         padding: 1em;
-        label {
-            @include border;
-            font-size: 2em;
-            padding: 0.25em;
+        
+        .iconshortcut {
+            &:hover label {
+                color: darken($color: $foreground, $amount: 10%);
+            }
+
+            label {
+                @include border;
+                font-size: 2em;
+                margin: 0.25em;
+                padding: 0.8em 0.5em;
+            }
         }
     }
 }

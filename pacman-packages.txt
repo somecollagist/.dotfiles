@@ -2,6 +2,7 @@ base
 base-devel
 bluez-utils
 eww-wayland
+discord
 firefox
 fish
 foot
