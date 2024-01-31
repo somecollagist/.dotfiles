@@ -12,9 +12,9 @@
     "./scripts/brightness.sh"    
 )
 
-(deflisten volume
-    "./scripts/volume.sh"
-)
+; (deflisten volume
+;     "./scripts/volume.sh"
+; )
 
 (defwidget workspaces []
     (box :class "workspaces"
@@ -62,7 +62,7 @@
             :space-evenly false
             { brightness }
             { datetime }
-            { volume }
+            ; { volume }
         )
         (box :class "dock rightdock"
             :halign "end"

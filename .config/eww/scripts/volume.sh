@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This uses a stupid amount of CPU time, mayeb remove/modify?
+
 VOLICONS=("󰝟" "" "" "" "" "" "" "" "" "" "")
 
 get-vol-icon() {

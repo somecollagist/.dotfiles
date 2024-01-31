@@ -13,9 +13,13 @@ jq
 man-db
 neofetch
 networkmanager
+pipewire
+polkit-kde-agent
 pulseaudio
 pulseaudio-bluetooth
 sof-firmware
+swaylock
 tlp
 ttf-jetbrains-mono-nerd
+wireplumber
 wofi
